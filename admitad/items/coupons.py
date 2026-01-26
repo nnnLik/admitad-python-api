@@ -16,6 +16,7 @@ class CouponsBase(Item):
         'campaign_category': lambda x: Item.sanitize_integer_array(x, 'campaign_category', blank=True),
         'category': lambda x: Item.sanitize_integer_array(x, 'category', blank=True),
         'type': lambda x: Item.sanitize_string_value(x, 'type', blank=True),
+        'is_tracking_promocode': lambda x: Item.sanitize_bool_value(x, 'tracking_promocode', blank=True),
     }
 
 
