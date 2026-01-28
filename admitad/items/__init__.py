@@ -18,3 +18,4 @@ from admitad.items.retag import *
 from admitad.items.broken_links import *
 from admitad.items.tickets import *
 from admitad.items.promo_offers import *
+from admitad.items.campaign_rates import *
