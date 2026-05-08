@@ -9,7 +9,7 @@ from admitad.items.base import Item
 __all__ = (
     'Websites',
     'WebsitesManage',
-    'WebsitesManageV2'
+    'WebsitesManageV2',
 )
 
 
@@ -221,7 +221,6 @@ class WebsitesManageV2(Item):
     CREATE_FIELDS = {
         'name': lambda x: Item.sanitize_string_value(x, 'name', max_length=200),
         'kind': lambda x: Item.sanitize_string_value(x, 'kind', max_length=50),
-        'native_kind': lambda x: Item.sanitize_string_value(x, 'native_kind', max_length=64, blank=True),
         'url': lambda x: Item.sanitize_string_value(x, 'url', max_length=255),
         'category': lambda x: Item.sanitize_integer_array(x, 'category'),
         'region': lambda x: Item.sanitize_string_array(x, 'region'),
@@ -237,7 +236,6 @@ class WebsitesManageV2(Item):
         Args:
             name (str) - website name
             kind (str) - website kind
-            native_kind (str) - real platform kind when top-level kind is subnetwork
             url (str) - website url
             category (list of int) - website categories
             region (list of str) - website regions
